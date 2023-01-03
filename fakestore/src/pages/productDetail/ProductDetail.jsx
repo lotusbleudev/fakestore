@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-import "./producDetail.css";
+import "./ProducDetail.css";
 import { useParams } from "react-router-dom";
 
 function productDetail() {
   const { id } = useParams();
   const [data, setData] = useState(null);
+
+  console.log(id);
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)

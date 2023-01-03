@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+main {
+  padding: 1em;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
