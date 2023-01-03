@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./producDetail.css";
+import "./ProducDetail.css";
 import { useParams } from "react-router-dom";
 
 function productDetail() {

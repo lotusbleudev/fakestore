@@ -4,25 +4,11 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: black;
-  color: white;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
   padding: 1em;
   border-bottom: 1px solid white;
-}
-
-.flex {
-  display: flex;
-  gap: 10px;
-}
-
-main {
-  padding: 1em;
 }
 
 .image {
