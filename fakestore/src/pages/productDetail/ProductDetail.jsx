@@ -16,7 +16,7 @@ function productDetail() {
     <>
       <main>
         <div>
-          <img style={{ width: "100%", maxWidth: "400px" }} src={data?.image} />
+          <img style={{ width: "300px", height: "auto" }} src={data?.image} />
         </div>
         <div
           className="flex"
