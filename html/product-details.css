@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: 1px solid white;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+main {
+  padding: 1em;
+}
+
+.image {
+  border: 1px solid white;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+  padding: 10px;
+  margin-top: 1em;
+}
+
+.add-to-cart {
+  border: 1px solid white;
+  padding: 10px;
+  margin-top: 1em;
+}
