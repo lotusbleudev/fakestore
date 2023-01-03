@@ -1,0 +1,59 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(26, 26, 26);
+    color: white;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px white;
+}
+
+.left,
+.right {
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.marginHeaderElement {
+    margin: 3px;
+}
+
+.taille {
+    width: 35px;
+    height: 20px;
+}
+
+.main {
+    margin: 3%;
+}
+
+.patternElement {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid white;
+    margin: 10px;
+}
+
+.leftMain {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rightMain {
+    margin: 13px;
+}
+
+.leftMain>p>span {
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+#burger {
+    width: 20px;
+    color: white;
+}
