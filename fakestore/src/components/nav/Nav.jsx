@@ -1,7 +1,7 @@
 const Nav = () => {
-    return (
-        <>
-            <nav>
+  return (
+    <>
+      <nav>
         <div className="flex">
           <span className="material-symbols-outlined"> menu </span>
           <h1>My Store</h1>
@@ -11,8 +11,8 @@ const Nav = () => {
           <span className="material-symbols-outlined"> shopping_cart </span>
         </div>
       </nav>
-        </>
-    )
-}
+    </>
+  );
+};
 
 export default Nav;
