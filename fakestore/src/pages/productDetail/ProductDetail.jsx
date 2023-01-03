@@ -6,6 +6,8 @@ function productDetail() {
   const { id } = useParams();
   const [data, setData] = useState(null);
 
+  console.log(id);
+
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
       .then((res) => res.json())
