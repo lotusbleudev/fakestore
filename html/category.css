@@ -1,0 +1,45 @@
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+background: black;}
+
+header nav {
+    color: white;
+    display: flex;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    height: 30px;
+    align-items: center;}
+
+header nav a{
+    color: white;
+    text-decoration: none;
+}
+
+   
+section{
+    color: white;
+    border: 1px solid white  ;
+    min-height: 300px;
+    padding:5px;
+}
+
+h1{
+    margin-bottom:10px ;
+}
+article{
+    border: 1px solid white;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+img{border: 1px solid white;
+    height: 40px;
+    width: 50px;
+    
+
+
+}
