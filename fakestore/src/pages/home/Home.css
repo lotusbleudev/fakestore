@@ -44,6 +44,10 @@ header nav {
     gap: 10px;
 }
 
+.rightMain {
+    margin: 13px;
+}
+
 .leftMain>p>span {
     font-size: smaller;
     font-weight: lighter;
