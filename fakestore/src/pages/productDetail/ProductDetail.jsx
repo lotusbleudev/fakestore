@@ -4,9 +4,7 @@ import { useParams } from "react-router-dom";
 
 function productDetail() {
   const { id } = useParams();
-  const [data, setData] = useState(null);
-
-  console.log(id);
+  const [data, setData] = useState({});
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${id}`)
@@ -17,19 +15,21 @@ function productDetail() {
   return (
     <>
       <main>
-        <div className="image">image</div>
+        <div>
+          <img style={{ width: "300px", height: "auto" }} src={data?.image} />
+        </div>
         <div
           className="flex"
           style={{ justifyContent: "space-between", padding: "1em 0" }}
         >
-          <h2>{data ? data.title : ""}</h2>
-          <p>{data ? data.price : ""}</p>
+          <h2>{data?.title}</h2>
+          <p>{data?.price}</p>
         </div>
         <p style={{ paddingBottom: "10px" }}>{data ? data.category : ""}</p>
 
-        <p>{data ? data.description : ""}</p>
+        <p>{data?.description}</p>
         <div className="category">
-          <p>{data ? data.category : ""}</p>
+          <p>{data?.category}</p>
           <div>
             <span className="material-symbols-outlined"> star </span>
             <span className="material-symbols-outlined"> star </span>

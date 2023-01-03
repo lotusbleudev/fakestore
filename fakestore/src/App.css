@@ -3,6 +3,11 @@ body {
   color: white;
 }
 
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 main {
   padding: 1em;
 }
