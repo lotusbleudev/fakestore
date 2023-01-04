@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
@@ -17,7 +18,6 @@ const Home = () => {
 
   let display = (data) => {
     setData(data);
-    console.log(data);
   };
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Home = () => {
     <>
       <div className="main">
         {data.map((value, index) => (
-          <a href={"/details/" + (index + 1)} key={index}>
+          <Link to={"/details/" + (index + 1)} key={index}>
             <div className="patternElement">
               <div className="leftMain">
                 <img className="taille" src={value.image} alt="" />
@@ -41,7 +41,7 @@ const Home = () => {
                 <h4>{value.price}€</h4>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </>

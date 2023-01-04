@@ -29,7 +29,12 @@ nav {
 }
 
 .add-to-cart {
+  cursor: pointer;
   border: 1px solid white;
   padding: 10px;
   margin-top: 1em;
+}
+
+.stars {
+  font-variation-settings: "FILL" 1;
 }

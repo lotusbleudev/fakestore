@@ -1,79 +1,37 @@
-import "./category.css"
+import { useParams } from "react-router-dom";
+import "./category.css";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Category = () => {
-    return (
+  const { category } = useParams();
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://fakestoreapi.com/products/category/${category}`)
+      .then((res) => res.json())
+      .then((json) => setData(json));
+  }, [category]);
+
+  return (
     <>
-    <header>
-        <nav>
-        <div className="one">
-        <a href=""><i class="fa-solid fa-bars"/></a>
-        <a href="">My store</a>
-        </div>
-        <div className="two">
-        <a href="">3</a>
-        <a href=""><i class="fa-solid fa-cart-shopping"/></a>
-        </div>
-        </nav>
-    </header>
-
-    <section>
-        <h1>Electronic</h1>
-        <article>
-            <div>
-            <a href=""><img src="/html/placeholder.png" alt=""/></a>
-            <p>Product1<br/>brand
-                
-            </p>
-        </div>
-            <p>100$</p>
-
-            
-
-        </article>
-        <article>
-            <div>
-                <a href=""><img src="/html/placeholder.png" alt=""/></a>
-                <p>Product1<br/>brand
-                    
-                </p>
-            </div>
-            <p>100$</p>
-            
-        </article>
-        <article>
-            <div>
-                <a href=""><img src="/html/placeholder.png" alt=""/></a>
-                <p>Product1<br/>brand
-                    
-                </p>
-            </div>
-            <p>100$</p>
-            
-        </article>
-        <article>
-            <div>
-                <a href=""><img src="/html/placeholder.png" alt=""/></a>
-                <p>Product1<br/>brand
-                    
-                </p>
-            </div>
-            <p>100$</p>
-            
-        </article>
-        <article>
-            <div>
-                <a href=""><img src="/html/placeholder.png" alt=""/></a>
-                <p>Product1<br/>brand
-                    
-                </p>
-            </div>
-            <p>100$</p>
-            
-        </article>
-    </section>
+      <section>
+        <h1>{category}</h1>
+        {data &&
+          data.map((d, i) => (
+            <Link to={"/details/" + d.id} key={i}>
+              <article>
+                <div>
+                  <img src={d.image} alt="" />
+                  <p>{d.title}</p>
+                </div>
+                <p>{d.price}</p>
+              </article>
+            </Link>
+          ))}
+      </section>
     </>
-    );
-
-}
+  );
+};
 
 export default Category;
